@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+
+h1{
+    color: aqua;
+    background-color: aquamarine;
+    font-size: 200px;
+    font-weight: 200;
+    font-style:italic ;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ /* div{ */
+    /* height:500px;
+    width: 500px; */
+    /* background: linear-gradient(to right,red,blue); */
+    /* background: linear-gradient(to right bottom,red 70%,blue); */
+    /* background:radial-gradient(red ,blue,yellow); */
+    /* background:conic-gradient(red,yellow); */
+/* }  */
+
+#outter{
+    height: 500px;
+    width: 500px;
+    background-color: crimson;
+
+}
+#inner{
+    width: 200px;
+    height: 200px;
+    background-color: lightseagreen;
+}
+
+div{
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1707438587276-2828a4576c52?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* cover - width vise  */
+    /* contain-height vise but reapeatation */
+}
