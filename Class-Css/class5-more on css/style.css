@@ -1,0 +1,28 @@
+*{ 
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+height:100%;
+}
+
+.box{
+    height: 300px;
+    width: 300px;
+    background-color: red;
+    transform: translate(-50%);
+}
+body{
+    perspective: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+img{
+    width: 500px;
+    height: 500px;
+    transform: rotatex(35deg);
+}
