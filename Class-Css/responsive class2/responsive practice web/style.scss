@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@mixin flex($gap) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+.view1 ,.view2,.view3{
+  max-width: 2000px;
+}
+html,
+body {
+  width: 100%;
+  height: 100%; 
+}
+
+html {
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: #121212;
+}
+@font-face {
+  font-family: Chillax;
+  src: url(./Chillax-Regular.otf);
+}
+
+html {
+  font-family: "Chillax";
+}
+
+main {
+  align-items: center;
+  padding: 0.01rem;
+  width: 100%;
+  @include flex(0rem);
+
+  section ,section.view3{
+    width: 100%;
+
+    padding: 1rem;
+
+    @include flex(1rem);
+
+    .top ,.top3{
+      width: 100%;
+
+      img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    }
+
+    .bottom ,.bottom3 {
+      padding: 2rem;
+      color: white;
+      width: 100%;
+      background-color: #1e1e1e;
+      border-radius: 10px;
+      @include flex(2rem);
+
+      .text ,.text23{
+        height: 100%;
+        @include flex(4rem);
+
+        .head h3 {
+          font-weight: 200;
+          font-size: 1rem;
+          font-family: "Roboto Mono", monospace;
+          text-transform: uppercase;
+        }
+
+        .text2 ,.text3{
+          @include flex(1rem);
+          h1 {
+            font-weight: 300;
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            line-height: 1.3;
+          }
+
+          p {
+            font-weight: 200;
+            font-size: 1.18rem;
+            color: #9e9d9a;
+            line-height: 1.5;
+          }
+          .button{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+
+            p {
+              color: white;
+              font-size: 0.9rem;
+            }
+
+            button {
+              border-radius: 100%;
+              background-color: #292929;
+              padding: 0.5rem;
+
+              img {
+                width: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+    section.view2{
+    width: 100%;
+    padding: 2rem;
+    align-items: center;
+    color: white;
+    @include flex(2rem);
+    .tbbox{
+      @include flex(5rem);
+      flex-direction: row;
+    }
+    .databox{
+      @include flex(0.2rem);
+      align-items: center;
+      
+      h3{
+        color: #90908d;
+        font-size: 1rem;
+      }
+      h1{
+        font-size: 3rem;
+        font-weight: 100;
+      }
+    }
+
+    }
+
+  }
+
+
+
+
+@media (min-width: 900px) {
+  main {
+    section.view1 ,section.view3{
+      flex-direction: row;
+
+      .top,
+      .bottom ,.tbbox,.top3,.bottom3{
+        width: 50%;
+      }
+
+      .bottom,.bottom3 {
+        padding: 4rem;
+        padding-right: 4.5rem;
+
+        .text ,.text23{
+          justify-content: space-between;
+
+          .text2 {
+            gap: 2rem;
+            h1 {
+              font-size: 4rem;
+            }
+            p {
+              font-size: 1.2rem;
+            }
+          }
+          .text3{
+            h1{
+              font-size: 3.1rem;
+            }
+          }
+        }
+      }
+    }
+
+
+
+
+
+    section.view2{
+      flex-direction: row;
+      justify-content: space-evenly;
+      .tbbox{
+        width: 50%;
+        justify-content: space-evenly;
+      }
+
+      .databox{
+        h3{
+          font-size: 1rem;
+        }
+        h1{
+          font-size: 4rem;
+        }
+
+      }
+
+    }
+
+    section.view3{
+      flex-direction: row-reverse;
+      .para{
+        @include flex(2rem);
+        flex-direction: row;
+      }
+      
+    }
+  }
+}

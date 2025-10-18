@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.view1, .view2, .view3 {
+  max-width: 2000px;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: clamp(14px, 1vw, 18px);
+}
+
+body {
+  background-color: #121212;
+}
+
+@font-face {
+  font-family: Chillax;
+  src: url(./Chillax-Regular.otf);
+}
+html {
+  font-family: "Chillax";
+}
+
+main {
+  align-items: center;
+  padding: 0.01rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+}
+main section, main section.view3 {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section .top, main section .top3, main section.view3 .top, main section.view3 .top3 {
+  width: 100%;
+}
+main section .top img, main section .top3 img, main section.view3 .top img, main section.view3 .top3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+main section .bottom, main section .bottom3, main section.view3 .bottom, main section.view3 .bottom3 {
+  padding: 2rem;
+  color: white;
+  width: 100%;
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section .bottom .text, main section .bottom .text23, main section .bottom3 .text, main section .bottom3 .text23, main section.view3 .bottom .text, main section.view3 .bottom .text23, main section.view3 .bottom3 .text, main section.view3 .bottom3 .text23 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+main section .bottom .text .head h3, main section .bottom .text23 .head h3, main section .bottom3 .text .head h3, main section .bottom3 .text23 .head h3, main section.view3 .bottom .text .head h3, main section.view3 .bottom .text23 .head h3, main section.view3 .bottom3 .text .head h3, main section.view3 .bottom3 .text23 .head h3 {
+  font-weight: 200;
+  font-size: 1rem;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+}
+main section .bottom .text .text2, main section .bottom .text .text3, main section .bottom .text23 .text2, main section .bottom .text23 .text3, main section .bottom3 .text .text2, main section .bottom3 .text .text3, main section .bottom3 .text23 .text2, main section .bottom3 .text23 .text3, main section.view3 .bottom .text .text2, main section.view3 .bottom .text .text3, main section.view3 .bottom .text23 .text2, main section.view3 .bottom .text23 .text3, main section.view3 .bottom3 .text .text2, main section.view3 .bottom3 .text .text3, main section.view3 .bottom3 .text23 .text2, main section.view3 .bottom3 .text23 .text3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+main section .bottom .text .text2 h1, main section .bottom .text .text3 h1, main section .bottom .text23 .text2 h1, main section .bottom .text23 .text3 h1, main section .bottom3 .text .text2 h1, main section .bottom3 .text .text3 h1, main section .bottom3 .text23 .text2 h1, main section .bottom3 .text23 .text3 h1, main section.view3 .bottom .text .text2 h1, main section.view3 .bottom .text .text3 h1, main section.view3 .bottom .text23 .text2 h1, main section.view3 .bottom .text23 .text3 h1, main section.view3 .bottom3 .text .text2 h1, main section.view3 .bottom3 .text .text3 h1, main section.view3 .bottom3 .text23 .text2 h1, main section.view3 .bottom3 .text23 .text3 h1 {
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 2.2rem;
+  line-height: 1.3;
+}
+main section .bottom .text .text2 p, main section .bottom .text .text3 p, main section .bottom .text23 .text2 p, main section .bottom .text23 .text3 p, main section .bottom3 .text .text2 p, main section .bottom3 .text .text3 p, main section .bottom3 .text23 .text2 p, main section .bottom3 .text23 .text3 p, main section.view3 .bottom .text .text2 p, main section.view3 .bottom .text .text3 p, main section.view3 .bottom .text23 .text2 p, main section.view3 .bottom .text23 .text3 p, main section.view3 .bottom3 .text .text2 p, main section.view3 .bottom3 .text .text3 p, main section.view3 .bottom3 .text23 .text2 p, main section.view3 .bottom3 .text23 .text3 p {
+  font-weight: 200;
+  font-size: 1.18rem;
+  color: #9e9d9a;
+  line-height: 1.5;
+}
+main section .bottom .text .text2 .button, main section .bottom .text .text3 .button, main section .bottom .text23 .text2 .button, main section .bottom .text23 .text3 .button, main section .bottom3 .text .text2 .button, main section .bottom3 .text .text3 .button, main section .bottom3 .text23 .text2 .button, main section .bottom3 .text23 .text3 .button, main section.view3 .bottom .text .text2 .button, main section.view3 .bottom .text .text3 .button, main section.view3 .bottom .text23 .text2 .button, main section.view3 .bottom .text23 .text3 .button, main section.view3 .bottom3 .text .text2 .button, main section.view3 .bottom3 .text .text3 .button, main section.view3 .bottom3 .text23 .text2 .button, main section.view3 .bottom3 .text23 .text3 .button {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+main section .bottom .text .text2 .button p, main section .bottom .text .text3 .button p, main section .bottom .text23 .text2 .button p, main section .bottom .text23 .text3 .button p, main section .bottom3 .text .text2 .button p, main section .bottom3 .text .text3 .button p, main section .bottom3 .text23 .text2 .button p, main section .bottom3 .text23 .text3 .button p, main section.view3 .bottom .text .text2 .button p, main section.view3 .bottom .text .text3 .button p, main section.view3 .bottom .text23 .text2 .button p, main section.view3 .bottom .text23 .text3 .button p, main section.view3 .bottom3 .text .text2 .button p, main section.view3 .bottom3 .text .text3 .button p, main section.view3 .bottom3 .text23 .text2 .button p, main section.view3 .bottom3 .text23 .text3 .button p {
+  color: white;
+  font-size: 0.9rem;
+}
+main section .bottom .text .text2 .button button, main section .bottom .text .text3 .button button, main section .bottom .text23 .text2 .button button, main section .bottom .text23 .text3 .button button, main section .bottom3 .text .text2 .button button, main section .bottom3 .text .text3 .button button, main section .bottom3 .text23 .text2 .button button, main section .bottom3 .text23 .text3 .button button, main section.view3 .bottom .text .text2 .button button, main section.view3 .bottom .text .text3 .button button, main section.view3 .bottom .text23 .text2 .button button, main section.view3 .bottom .text23 .text3 .button button, main section.view3 .bottom3 .text .text2 .button button, main section.view3 .bottom3 .text .text3 .button button, main section.view3 .bottom3 .text23 .text2 .button button, main section.view3 .bottom3 .text23 .text3 .button button {
+  border-radius: 100%;
+  background-color: #292929;
+  padding: 0.5rem;
+}
+main section .bottom .text .text2 .button button img, main section .bottom .text .text3 .button button img, main section .bottom .text23 .text2 .button button img, main section .bottom .text23 .text3 .button button img, main section .bottom3 .text .text2 .button button img, main section .bottom3 .text .text3 .button button img, main section .bottom3 .text23 .text2 .button button img, main section .bottom3 .text23 .text3 .button button img, main section.view3 .bottom .text .text2 .button button img, main section.view3 .bottom .text .text3 .button button img, main section.view3 .bottom .text23 .text2 .button button img, main section.view3 .bottom .text23 .text3 .button button img, main section.view3 .bottom3 .text .text2 .button button img, main section.view3 .bottom3 .text .text3 .button button img, main section.view3 .bottom3 .text23 .text2 .button button img, main section.view3 .bottom3 .text23 .text3 .button button img {
+  width: 1rem;
+}
+main section.view2 {
+  width: 100%;
+  padding: 2rem;
+  align-items: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main section.view2 .tbbox {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  flex-direction: row;
+}
+main section.view2 .databox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  align-items: center;
+}
+main section.view2 .databox h3 {
+  color: #90908d;
+  font-size: 1rem;
+}
+main section.view2 .databox h1 {
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+@media (min-width: 900px) {
+  main section.view1, main section.view3 {
+    flex-direction: row;
+  }
+  main section.view1 .top,
+  main section.view1 .bottom, main section.view1 .tbbox, main section.view1 .top3, main section.view1 .bottom3, main section.view3 .top,
+  main section.view3 .bottom, main section.view3 .tbbox, main section.view3 .top3, main section.view3 .bottom3 {
+    width: 50%;
+  }
+  main section.view1 .bottom, main section.view1 .bottom3, main section.view3 .bottom, main section.view3 .bottom3 {
+    padding: 4rem;
+    padding-right: 4.5rem;
+  }
+  main section.view1 .bottom .text, main section.view1 .bottom .text23, main section.view1 .bottom3 .text, main section.view1 .bottom3 .text23, main section.view3 .bottom .text, main section.view3 .bottom .text23, main section.view3 .bottom3 .text, main section.view3 .bottom3 .text23 {
+    justify-content: space-between;
+  }
+  main section.view1 .bottom .text .text2, main section.view1 .bottom .text23 .text2, main section.view1 .bottom3 .text .text2, main section.view1 .bottom3 .text23 .text2, main section.view3 .bottom .text .text2, main section.view3 .bottom .text23 .text2, main section.view3 .bottom3 .text .text2, main section.view3 .bottom3 .text23 .text2 {
+    gap: 2rem;
+  }
+  main section.view1 .bottom .text .text2 h1, main section.view1 .bottom .text23 .text2 h1, main section.view1 .bottom3 .text .text2 h1, main section.view1 .bottom3 .text23 .text2 h1, main section.view3 .bottom .text .text2 h1, main section.view3 .bottom .text23 .text2 h1, main section.view3 .bottom3 .text .text2 h1, main section.view3 .bottom3 .text23 .text2 h1 {
+    font-size: 4rem;
+  }
+  main section.view1 .bottom .text .text2 p, main section.view1 .bottom .text23 .text2 p, main section.view1 .bottom3 .text .text2 p, main section.view1 .bottom3 .text23 .text2 p, main section.view3 .bottom .text .text2 p, main section.view3 .bottom .text23 .text2 p, main section.view3 .bottom3 .text .text2 p, main section.view3 .bottom3 .text23 .text2 p {
+    font-size: 1.2rem;
+  }
+  main section.view1 .bottom .text .text3 h1, main section.view1 .bottom .text23 .text3 h1, main section.view1 .bottom3 .text .text3 h1, main section.view1 .bottom3 .text23 .text3 h1, main section.view3 .bottom .text .text3 h1, main section.view3 .bottom .text23 .text3 h1, main section.view3 .bottom3 .text .text3 h1, main section.view3 .bottom3 .text23 .text3 h1 {
+    font-size: 3.1rem;
+  }
+  main section.view2 {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  main section.view2 .tbbox {
+    width: 50%;
+    justify-content: space-evenly;
+  }
+  main section.view2 .databox h3 {
+    font-size: 1rem;
+  }
+  main section.view2 .databox h1 {
+    font-size: 4rem;
+  }
+  main section.view3 {
+    flex-direction: row-reverse;
+  }
+  main section.view3 .para {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-direction: row;
+  }
+}/*# sourceMappingURL=style.css.map */
