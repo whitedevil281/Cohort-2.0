@@ -10,13 +10,15 @@
   gap: $gap;
 }
 
-.view1 ,.view2,.view3{
+.view1,
+.view2,
+.view3 {
   max-width: 2000px;
 }
 html,
 body {
   width: 100%;
-  height: 100%; 
+  height: 100%;
 }
 
 html {
@@ -41,14 +43,16 @@ main {
   width: 100%;
   @include flex(0rem);
 
-  section ,section.view3{
+  section,
+  section.view3 {
     width: 100%;
 
     padding: 1rem;
 
     @include flex(1rem);
 
-    .top ,.top3{
+    .top,
+    .top3 {
       width: 100%;
 
       img {
@@ -57,7 +61,8 @@ main {
       }
     }
 
-    .bottom ,.bottom3 {
+    .bottom,
+    .bottom3 {
       padding: 2rem;
       color: white;
       width: 100%;
@@ -65,7 +70,8 @@ main {
       border-radius: 10px;
       @include flex(2rem);
 
-      .text ,.text23{
+      .text,
+      .text23 {
         height: 100%;
         @include flex(4rem);
 
@@ -76,7 +82,8 @@ main {
           text-transform: uppercase;
         }
 
-        .text2 ,.text3{
+        .text2,
+        .text3 {
           @include flex(1rem);
           h1 {
             font-weight: 300;
@@ -91,7 +98,7 @@ main {
             color: #9e9d9a;
             line-height: 1.5;
           }
-          .button{
+          .button {
             display: flex;
             gap: 1rem;
             align-items: center;
@@ -116,54 +123,137 @@ main {
     }
   }
 
-
-
-    section.view2{
+  section.view2 {
     width: 100%;
     padding: 2rem;
     align-items: center;
     color: white;
     @include flex(2rem);
-    .tbbox{
+    .tbbox {
       @include flex(5rem);
       flex-direction: row;
     }
-    .databox{
+    .databox {
       @include flex(0.2rem);
       align-items: center;
-      
-      h3{
+
+      h3 {
         color: #90908d;
         font-size: 1rem;
       }
-      h1{
+      h1 {
         font-size: 3rem;
         font-weight: 100;
       }
     }
-
-    }
-
   }
 
+  .view4 {
+    width: 100%;
+    @include flex(3rem);
+    color: white;
 
+    .heading {
+      font-size: 3rem;
+      margin-left: 0.5rem;
+    }
 
+    .teamboxes{
 
+      @include flex(2rem);
+      #team2{
+        background-image: url("./team2.webp");
+      }
+      #team3{
+        background-image: url("./team3.webp");
+      }
+
+      .teambox {
+        width: 100%;
+        background-image: url("./team1.webp");
+        background-size: cover;
+        border-radius: 0.6rem;
+        aspect-ratio: 1/1;
+        @include flex(0rem);
+        justify-content: space-between;
+        padding: 2rem;
+  
+        .social {
+          width: 100%;
+  
+          padding: 0.1rem;
+          @include flex(1rem);
+          flex-direction: row;
+          justify-content: flex-end;
+          gap: 1rem;
+          a {
+            padding: 0.5rem;
+            background-color: rgba(255, 255, 255, 0.1); /* translucent layer */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px); /* Safari support */
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+  
+          i {
+            font-size: 1.2rem;
+            filter: opacity(50%);
+            background: transparent;
+          }
+        }
+  
+        .details {
+          width: 100%;
+          background-color: grey;
+          padding: 1rem;
+          border-radius: 0.5rem;
+          @include flex(1rem);
+          flex-direction: row;
+          justify-content: space-between;
+          background: transparent;
+          backdrop-filter: blur(10px);
+  
+          align-items: center;
+          h2 {
+            letter-spacing: 0.1rem;
+            font-weight:  500;
+            text-transform: uppercase;
+          }
+          h3 {
+            font-size: 0.975rem;
+            font-weight: 500;
+            letter-spacing: 0.1rem;
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+  }
+}
 @media (min-width: 900px) {
   main {
-    section.view1 ,section.view3{
+    section.view1,
+    section.view3 {  
       flex-direction: row;
 
       .top,
-      .bottom ,.tbbox,.top3,.bottom3{
+      .bottom,
+      .tbbox,
+      .top3,
+      .bottom3 {
         width: 50%;
       }
 
-      .bottom,.bottom3 {
+      .bottom,
+      .bottom3 {
         padding: 4rem;
         padding-right: 4.5rem;
 
-        .text ,.text23{
+        .text,
+        .text23 {
           justify-content: space-between;
 
           .text2 {
@@ -175,8 +265,8 @@ main {
               font-size: 1.2rem;
             }
           }
-          .text3{
-            h1{
+          .text3 {
+            h1 {
               font-size: 3.1rem;
             }
           }
@@ -184,37 +274,35 @@ main {
       }
     }
 
-
-
-
-
-    section.view2{
+    section.view2 {
       flex-direction: row;
       justify-content: space-evenly;
-      .tbbox{
+      .tbbox {
         width: 50%;
         justify-content: space-evenly;
       }
 
-      .databox{
-        h3{
+      .databox {
+        h3 {
           font-size: 1rem;
         }
-        h1{
+        h1 {
           font-size: 4rem;
         }
-
       }
-
     }
 
-    section.view3{
+    section.view3 {
       flex-direction: row-reverse;
-      .para{
+      .para {
         @include flex(2rem);
         flex-direction: row;
       }
-      
+    }
+    section.view4{
+      .teamboxes{
+        flex-direction: row;
+      }
     }
   }
 }
