@@ -16,3 +16,71 @@ body {
   gap: $gap;
 }
 
+main {
+  .hero {
+    width: 100%;
+    padding: 5rem 0rem;
+    background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+    .container1 {
+      text-align: center;
+      margin: 0rem 1.5rem;
+      .top {
+        width: 100%;
+        @include flex(4rem);
+        flex-direction: column-reverse;
+        
+
+        .headhero {
+          text-align: center;
+          h1 {
+            margin: 0px auto;
+
+            line-height: 1;
+            font-size: 2.7rem;
+          }
+        }
+
+        img {
+          width: 100%;
+        }
+      }
+      #details {
+        margin: 7rem 0rem 2.5rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+
+@media (min-width: 900px){
+
+  main{
+    .hero{
+
+      .container1{
+        margin: 0 3rem;
+        .top{
+          flex-direction: row;
+          align-items: center;
+
+          .headhero{
+         
+            text-align: left;
+          
+            
+            h1{
+              font-size: 4.3rem;
+              font-weight: 700;
+              
+              margin: 0rem 4rem 0rem 6rem   ;
+            }
+          }
+          img{
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -10,4 +10,57 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Open Sans", sans-serif;
+}
+
+main .hero {
+  width: 100%;
+  padding: 5rem 0rem;
+  background: linear-gradient(35deg, #fcdde8, #f3fcff 60%);
+}
+main .hero .container1 {
+  text-align: center;
+  margin: 0rem 1.5rem;
+}
+main .hero .container1 .top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  flex-direction: column-reverse;
+}
+main .hero .container1 .top .headhero {
+  text-align: center;
+}
+main .hero .container1 .top .headhero h1 {
+  margin: 0px auto;
+  line-height: 1;
+  font-size: 2.7rem;
+}
+main .hero .container1 .top img {
+  width: 100%;
+}
+main .hero .container1 #details {
+  margin: 7rem 0rem 2.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 900px) {
+  main .hero .container1 {
+    margin: 0 3rem;
+  }
+  main .hero .container1 .top {
+    flex-direction: row;
+    align-items: center;
+  }
+  main .hero .container1 .top .headhero {
+    text-align: left;
+  }
+  main .hero .container1 .top .headhero h1 {
+    font-size: 4.3rem;
+    font-weight: 700;
+    margin: 0rem 4rem 0rem 6rem;
+  }
+  main .hero .container1 .top img {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
