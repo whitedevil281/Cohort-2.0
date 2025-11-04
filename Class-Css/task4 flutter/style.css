@@ -25,7 +25,7 @@ main .hero .container1 .top {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 3rem;
   flex-direction: column-reverse;
 }
 main .hero .container1 .top .headhero {
@@ -43,6 +43,33 @@ main .hero .container1 #details {
   margin: 7rem 0rem 2.5rem;
   font-weight: 400;
 }
+main .view1 {
+  padding: 4rem 0rem;
+}
+main .view1 .container2 {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0rem 1.5rem;
+}
+main .view1 .container2 .detailsboxes {
+  border-top: 6px solid #e8eaed;
+  padding: 2rem 2rem 0rem 0rem;
+}
+main .view1 .container2 .detailsboxes h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 1rem;
+}
+main .view1 .container2 .detailsboxes h3 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin-top: 1rem;
+}
+main .view1 .container2 .detailsboxes img {
+  width: 100%;
+  margin-top: 3rem;
+}
 
 @media (min-width: 900px) {
   main .hero .container1 {
@@ -51,6 +78,7 @@ main .hero .container1 #details {
   main .hero .container1 .top {
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
   }
   main .hero .container1 .top .headhero {
     text-align: left;
@@ -62,5 +90,21 @@ main .hero .container1 #details {
   }
   main .hero .container1 .top img {
     width: 50%;
+  }
+  main .hero .container1 #details {
+    margin: 2rem 2rem 4rem 4rem;
+  }
+  main .view1 .container2 {
+    flex-direction: row;
+    margin: 0rem 10rem;
+  }
+  main .view1 .container2 .detailsboxes {
+    padding: 3rem 3rem 0rem 0rem;
+  }
+  main .view1 .container2 .detailsboxes h1 {
+    font-size: 2rem;
+  }
+  main .view1 .container2 .detailsboxes h3 {
+    font-size: 1.225rem;
   }
 }/*# sourceMappingURL=style.css.map */
