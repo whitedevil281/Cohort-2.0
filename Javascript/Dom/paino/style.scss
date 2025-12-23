@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  h1{
+    font-size: 4rem;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .painobox {
+    position: absolute;
+    bottom: 5rem;
+    border-radius: 1rem;
+    background-color: rgb(25, 25, 25);
+    height: fit-content;
+    display: flex;
+
+    .box {
+      position: relative;
+      display: flex;
+      justify-content: center;
+
+      .blackbox {
+        display: flex;
+        position: absolute;
+        gap: 1.2rem;
+
+        .black {
+          display: flex;
+          position: relative;
+          z-index: 10;
+          align-items: center;
+          padding: 1.5rem;
+          margin: 0.19rem;
+          background-color: black;
+          color: white;
+          border-radius: 0.5rem;
+          font-size: 2rem;
+          height: 8rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: inherit;
+        }
+      }
+      .whitebox {
+        display: flex;
+
+        .white {
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          padding: 2rem;
+          margin: 0.19rem;
+          background-color: white;
+          color: black;
+          border-radius: 0.5rem;
+          font-size: 2rem;
+          height: 15rem;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          font-family: inherit;
+        }
+      }
+    }
+  }
+}
+.white:active::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #6ebdf4;
+  opacity: 0.4;
+  pointer-events: none;
+}
+.white.active::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #6ebdf4;
+    opacity: 0.4;
+    pointer-events: none;
+}

@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+.container .box {
+  width: 15rem;
+  height: 15rem;
+  background-color: white;
+  transition: all 0.5s ease-in-out;
+}
+.container .box:hover {
+  transform: scale(1.2) !important;
+  opacity: 1 !important;
+}
+
+.container:has(.box:hover) .box {
+  transform: scale(0.8);
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

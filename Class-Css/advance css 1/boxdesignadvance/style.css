@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+@property --degchange {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes rotate {
+  from {
+    --degchange: 0deg;
+  }
+  to {
+    --degchange: 360deg;
+  }
+}
+.box {
+  width: 28rem;
+  height: 35rem;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: linear-gradient(black) padding-box,
+    conic-gradient(from var(--degchange), black 40%, rgb(255, 0, 183), black)
+      border-box;
+  animation: rotate 3s ease-in-out infinite;
+  animation-play-state: paused;
+  transition: all 2s linear;
+}
+.box .img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.box .img img {
+  width: 90%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.box .content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.box .content p {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.box:hover {
+  animation-play-state: running;
+  box-shadow: 0 0 5rem rgb(255, 0, 183);
+  border: 0.5rem solid rgba(255, 0, 183, 0);
+  color: rgb(255, 0, 183);
+  text-shadow: 0 0 2rem rgb(255, 0, 183);
+} /*# sourceMappingURL=style.css.map */

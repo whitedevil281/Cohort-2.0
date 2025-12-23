@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@property --deg {
+  syntax: "<angle>";
+  initial-value: 480deg;
+  inherits: false;
+}
+@keyframes rotate {
+  from {
+    --deg: 0deg;
+  }
+  to {
+    --deg: 360deg;
+  }
+}
+
+:root {
+  --primary-bg: #f3f7fc;
+  --secondary-bg: white;
+  --primary-text: #393c4f;
+  --secondary-text: black;
+  --primary-blend: #6366f1;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg);
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  scrollbar-width: none;
+}
+
+main {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  scroll-snap-stop: always;
+  width: 100%;
+  height: 100vh;
+  .chnagetheme {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 2;
+    button {
+      padding: 1rem 1.5rem;
+      background-color: var(--primary-blend);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 1.3rem;
+      font-weight: bold;
+    }
+    #changetheme:active {
+      background-color: #4338ca;
+      transform: scale(0.9);
+    }
+  } 
+
+  .section-view1 {
+    scroll-snap-align: start;
+    nav {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10rem;
+      .nav {
+        background: var(--secondary-bg);
+        padding: 2rem;
+        border: 3px solid var(--secondary-bg);
+        width: 80%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 4rem 2rem 0rem;
+        border-radius: 1rem;
+        box-shadow: 7px 10px 20px 12px rgba(0, 0, 0, 0.203);
+        align-items: center;
+        h1 {
+          color: var(--primary-text);
+          font-size: 3rem;
+        }
+      }
+    }
+    margin-bottom: 4rem;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .view1 {
+      width: 80%;
+      height: 40vh;
+      // background-image: url("../weather.png");
+      background: url("../weather.png") content-box,
+        conic-gradient(from var(--deg), white 80%, var(--primary-blend))
+          border-box;
+      box-shadow: 7px 10px 20px 12px rgba(0, 0, 0, 0.203);
+      animation: rotate 3s linear infinite;
+      animation-play-state: paused;
+      background-size: cover;
+      background-position: center 80%;
+      display: flex;
+      border: 4px solid #ffffff;
+      justify-content: space-between;
+      transition: all 0.3s ease-in-out;
+      border-radius: 1rem;
+      // box-shadow: 0px 0px 30px 15px var(--primary-blend);
+      .view1-left {
+        margin: 3rem;
+        .date {
+          color: var(--primary-text);
+          font-size: 3rem;
+          font-weight: 300;
+        }
+        .city {
+          color: var(--primary-text);
+          font-size: 2.3rem;
+        }
+        .time {
+          color: var(--primary-text);
+          font-weight: bolder;
+          display: flex;
+          .time-data {
+            font-size: 4rem;
+            letter-spacing: 0.6rem;
+          }
+          .day {
+            font-size: 4rem;
+            margin-right: 1rem;
+          }
+        }
+        .line {
+          width: 100%;
+          height: 3px;
+          background: linear-gradient(to right, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+          margin: 2rem 0rem;
+        }
+      }
+      .view1-right {
+        margin: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        .view1-right-top {
+          text-align: center;
+          .temp {
+            font-size: 5rem;
+            color: var(--primary-text);
+            font-weight: bolder;
+          }
+          .weather {
+            font-size: 1.5rem;
+            color: var(--primary-text);
+            font-weight: bold;
+          }
+        }
+        .view1-right-bottom {
+          .weatherinfo {
+            color: var(--primary-text);
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin: 0.7rem 0rem;
+          }
+        }
+      }
+    }
+  }
+  .blur-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.05);
+    opacity: 0;
+    pointer-events: none;
+    backdrop-filter: blur(3px);
+    transition: opacity 0.2s ease 0.1s;
+    z-index: 3;
+  }
+
+  .section-view2 {
+    scroll-snap-align: start;
+    anchor-name: --main;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    .box-main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+      box-shadow: 7px 10px 20px 12px rgba(0, 0, 0, 0.203);
+      border-radius: 1rem;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      #dailyplanner {
+        anchor-name: --dailyplanner;
+      }
+      #todo {
+        anchor-name: --todo;
+      }
+      #motivation {
+        anchor-name: --motivation;
+      }
+      #pomodoro {
+        anchor-name: --pomodoro;
+      }
+      #kanbanboard {
+        anchor-name: --kanbanboard;
+      }
+
+      .box-down {
+        width: 15vw;
+        height: 30vh;
+        border-radius: 1rem;
+        border: 3px solid transparent;
+        pointer-events: none;
+        margin: 1rem;
+      }
+      .heading-box {
+        pointer-events: none;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .line {
+          width: 80%;
+          height: 3px;
+          background-color: black;
+        }
+        .heading {
+          font-size: 2.5rem;
+          font-weight: bolder;
+        }
+      }
+    }
+  }
+}
+
+main section .box-hover-animation:hover {
+  //weather box ke liye hi hai
+  border: 3px solid #ffffff00;
+  animation-play-state: running !important;
+  transform: scale(1.1);
+}
+
+section:has(.box-hover-animation:hover) .z-index-3 {
+  //if hover z-index- uppermost
+  z-index: 5;
+}
+main:has(section .box-hover-animation:hover) {
+  //if hover blur background
+  .blur-overlay {
+    opacity: 1;
+  }
+}
+main:has(.box-main:hover) .box-main:not(:hover) {
+  //other boxes blur and scale down
+  z-index: 0 !important;
+  transform: scale(0.9) !important;
+}
+main:has(.box-main:hover) .box-anchor:not(:hover) {
+  //other boxes blur and scale down
+  z-index: 0 !important;
+  transform: scale(0.9) !important;
+}
+main:has(.box-anchor:hover) .box-main:not(:hover) {
+  //other boxes blur and scale down
+  z-index: 0 !important;
+  transform: scale(0.9) !important;
+}
+main:has(.box-anchor:hover) {
+  .blur-overlay {
+    opacity: 1;
+  }
+}
+main:has(.box-anchor:hover) .box-anchor:not(:hover) {
+  z-index: 0 !important;
+  transform: scale(0.9) !important;
+}
+main:has(#todo-mainbox:hover) #anchor-box-todo,
+main:has(#dailyplanner-mainbox:hover) #anchor-box-dailyplanner,
+main:has(#motivation-mainbox:hover) #anchor-box-motivation,
+main:has(#pomodoro-mainbox:hover) #anchor-box-pomodoro,
+main:has(#kanbanboard-mainbox:hover) #anchor-box-kanbanboard {
+  animation-play-state: running !important;
+  border: 3px solid #ffffff00 !important;
+  transform: scale(0.9) !important;
+  z-index: 5 !important;
+}
+#anchor-box-todo:hover,
+#anchor-box-dailyplanner:hover,
+#anchor-box-motivation:hover,
+#anchor-box-pomodoro:hover,
+#anchor-box-kanbanboard:hover {
+  animation-play-state: running !important;
+  border: 3px solid #ffffff00 !important;
+  transform: scale(0.9) !important;
+  z-index: 5 !important;
+}
+
+main:has(#anchor-box-todo:hover) #todo-mainbox {
+  transform: scale(1.1) !important;
+  z-index: 5 !important;
+}
+main:has(#anchor-box-dailyplanner:hover) #dailyplanner-mainbox {
+  transform: scale(1.1) !important;
+  z-index: 5 !important;
+}
+main:has(#anchor-box-motivation:hover) #motivation-mainbox {
+  transform: scale(1.1) !important;
+  z-index: 5 !important;
+}
+main:has(#anchor-box-pomodoro:hover) #pomodoro-mainbox {
+  transform: scale(1.1) !important;
+  z-index: 5 !important;
+}
+main:has(#anchor-box-kanbanboard:hover) #kanbanboard-mainbox {
+  transform: scale(1.1) !important;
+  z-index: 5 !important;
+}
+
+.anchor-todo-bg {
+  background: url("../todo.png") padding-box,
+    conic-gradient(from var(--deg), white 80%, var(--primary-blend)) border-box;
+  background-size: cover;
+  background-position: center;
+  position-anchor: --todo;
+}
+
+.anchor-dailyplanner-bg {
+  background: url("../dailyplanner.png") padding-box,
+    conic-gradient(from var(--deg), white 80%, var(--primary-blend)) border-box;
+  background-size: cover;
+  background-position: center;
+  position-anchor: --dailyplanner;
+}
+
+.anchor-motivation-bg {
+  background: url("../motivation.png") padding-box,
+    conic-gradient(from var(--deg), white 80%, var(--primary-blend)) border-box;
+  background-size: cover;
+  background-position: center;
+  position-anchor: --motivation;
+}
+
+.anchor-pomodoro-bg {
+  background: url("../pomodoro.png") padding-box,
+    conic-gradient(from var(--deg), white 80%, var(--primary-blend)) border-box;
+  background-position: center;
+  background-size: cover;
+  position-anchor: --pomodoro;
+}
+
+.anchor-kanbanboard-bg {
+  background: url("../kanban.png") padding-box,
+    conic-gradient(from var(--deg), white 80%, var(--primary-blend)) border-box;
+  background-size: cover;
+  background-position: center;
+  position-anchor: --kanbanboard;
+}
+
+.box-anchor {
+  transition: all 0.3s linear;
+  border-radius: 1rem;
+  border: 3px solid #ffffff;
+  box-shadow: 7px 10px 20px 3px rgba(0, 0, 0, 0.203);
+  animation: rotate 3s linear infinite;
+  animation-play-state: paused;
+  position: absolute;
+  top: anchor(top);
+  left: anchor(left);
+  right: anchor(right);
+  bottom: anchor(bottom);
+}
+.fullscreen {
+  border: none !important;
+  border-radius: 0 !important;
+  z-index: 333 !important;
+  pointer-events: none !important;
+}
+
+main .box-anchor{
+  .exitbutton {
+    width: 4rem;
+    height: 4rem;
+    box-shadow: 7px 10px 20px 5px rgba(0, 0, 0, 0.203);
+    border-radius: 1rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    display: none;
+  }
+  #todo-exitbutton:active{
+    transform: scale(0.9) !important;
+  }
+}

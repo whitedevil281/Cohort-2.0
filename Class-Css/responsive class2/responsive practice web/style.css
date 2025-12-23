@@ -22,6 +22,7 @@ html {
 
 body {
   background-color: #121212;
+  position: relative;
 }
 
 @font-face {
@@ -32,6 +33,17 @@ html {
   font-family: "Chillax";
 }
 
+.cursor {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+  mix-blend-mode: difference;
+  background-color: white;
+  position: absolute;
+  transition: all linear 0.01s;
+  transform: translate(-50%, -50%);
+}
+
 main {
   align-items: center;
   padding: 0.01rem;
@@ -39,6 +51,47 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0rem;
+}
+main nav {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main nav .left-nav {
+  width: 80%;
+  padding: 0;
+}
+main nav .left-nav ul {
+  display: flex;
+}
+main nav .left-nav ul li > a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+}
+main nav .left-nav ul li {
+  display: flex;
+  align-items: center;
+  margin: 0.5rem 1rem;
+}
+main nav .right-nav {
+  padding: 0;
+  width: 20%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+main nav .right-nav li {
+  display: flex;
+  align-items: center;
+}
+main nav .right-nav li button {
+  color: white;
+  background: none;
+  font-size: 1.5rem;
 }
 main section,
 main section.view3 {

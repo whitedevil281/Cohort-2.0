@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,html{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+}
+:root{
+    --x:50%;
+    --y:50%;
+}
+.cursor{
+ width: 100%;
+ height: 100%;
+ background: radial-gradient(15rem at var(--x) var(--y), rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.799)); 
+ position: absolute;  
+ pointer-events: none;
+ 
+
+}
+main{
+    background-color:grey;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+    h1{
+        color: rgb(51, 49, 49);
+        font-size: 10rem;
+        text-align: center;
+        margin: 2rem;
+    }
+    .grid-container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .box{
+        width: 100%;
+        height: 10rem;
+        
+        background-color: #ccc;
+     
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+    }
+}
+
