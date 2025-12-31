@@ -1,0 +1,155 @@
+/* =========================
+   ROOT VARIABLES
+========================= */
+:root {
+  --bg-main: #000000;
+  --bg-search: #161616;
+  --text-primary: #ffffff;
+  --text-secondary: rgb(255, 255, 255);
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --card-radius: 26px;
+  --search-radius: 14px;
+  --blur-strength: 8px;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* =========================
+   BODY
+========================= */
+body {
+  background: var(--bg-main);
+  min-height: 100vh;
+  color: var(--text-primary);
+}
+
+/* =========================
+   APP LAYOUT
+========================= */
+#app {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* =========================
+   SEARCH SECTION
+========================= */
+#search-section {
+  display: flex;
+  justify-content: center;
+}
+
+#search-input {
+  width: 260px;
+  padding: 12px 16px;
+  background: var(--bg-search);
+  border: none;
+  border-radius: var(--search-radius);
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+}
+#search-input::-moz-placeholder {
+  color: var(--text-muted);
+}
+#search-input::placeholder {
+  color: var(--text-muted);
+}
+#search-input:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+/* =========================
+   CARDS SECTION
+========================= */
+#cards-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+}
+
+/* =========================
+   USER CARD
+========================= */
+.user-card {
+  width: 150px;
+  height: 240px;
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.user-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.8);
+}
+
+/* =========================
+   CARD IMAGE
+========================= */
+.user-card-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+/* =========================
+   BLUR OVERLAY (MASK)
+========================= */
+.user-card-blur {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+  mask-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+  -webkit-mask-image: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+.user-card-content {
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+.user-card-title {
+  z-index: 2;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-card-text {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Call</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section id="form-wrapper">
+    <form id="new-call-form">
+
+      <h1 id="form-title">New Call</h1>
+
+      <!-- Image URL -->
+      <div class="field">
+        <label for="image-url">Image URL</label>
+        <input
+        
+         autocomplete="off"
+          id="image-url"
+          type="url"
+          placeholder="https://example.com/photo.jpg"
+        />
+      </div>
+
+      <!-- Full Name -->
+      <div class="field">
+        <label for="full-name">Full Name</label>
+        <input
+        
+         autocomplete="off"
+          id="full-name"
+          type="text"
+          placeholder="Enter full name"
+        />
+      </div>
+
+      <!-- Home Town -->
+        <div class="field">
+        <label for="home-town">Home Town</label>
+        <select    id="home-town" name="home-town">
+        </select>
+      </div>
+
+      <!-- Purpose -->
+      <div class="field">
+        <label for="purpose">Purpose</label>
+        <input
+        
+         autocomplete="off"
+          id="purpose"
+          type="text"
+          placeholder="e.g. Quick appointment note"
+        />
+      </div>
+
+      <!-- Category -->
+      <div class="field">
+        <label>Category</label>
+
+        <div id="category-group">
+          <label class="radio" id="emergency">
+            <input id="cat-emergency" type="radio" name="category" value="emergency" />
+            <span id="emergency-span"></span>
+            Emergency
+          </label>
+
+          <label class="radio" id="important">
+            <input id="cat-important" type="radio" name="category" value="important" />
+            <span id="important-span"></span>
+            Important
+          </label>
+
+          <label class="radio" id="urgent">
+            <input id="cat-urgent" type="radio" name="category" value="urgent" />
+            <span id="urgent-span"></span>
+            Urgent
+          </label>
+
+          <label class="radio" id="no-rush">
+            <input id="cat-no-rush" type="radio" name="category" value="no-rush" />
+            <span id="no-rush-span"></span>
+            No Rush
+          </label>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <button id="create-note-btn" type="submit">
+        Create Note
+      </button>
+
+      <button id="close-btn" type="button">
+        Close
+      </button>
+      <div id="error" ></div>
+    </form>
+  </section>
+  <section class="cards">
+    <div class="box">
+      <div class="controls">
+        <button class="add "><img src="./add.png" alt=""></button>
+        <div class="updown">
+          <button class="up"><img src="./up.png" alt=""></button>
+          <button class="down"><img src="./up.png" alt=""></button>
+        </div>
+      </div>
+      <div class="cards-boxes">
+        
+      </div>
+      <div class="colours">
+        <button class="Red"></button>
+        <button class="Orange"></button>
+        <button class="Purple"></button>
+        <button class="white"></button>
+  
+      </div>
+    </div>
+  </section>
+  <script  src="script.js"></script>
+</body>
+</html>

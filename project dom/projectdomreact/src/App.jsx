@@ -2,7 +2,7 @@
 import './css/style.css'
 import Section1 from './components/section1.jsx'
 import Section2 from './components/section2.jsx'
-import './script.js'
+import '../../script.js'
 
 function App() {
   
